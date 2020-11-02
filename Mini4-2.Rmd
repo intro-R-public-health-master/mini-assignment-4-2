@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE, eval=FALSE)
 ```
 
-**Due Sunday, November 10 @ 11:59pm through Github**
+**Due Sunday, November 8 @ 11:59pm through Github**
 
 In this next assignment, you will continue working on creating functions in `R`. next assignment is to practice creating functions in `R`.
 
@@ -70,7 +70,9 @@ means_ci(x2, y2, type="two.means", na.rm=TRUE)   # should get [1] -0.06933551 -0
 ```
 
 
-2. Update your function from #1 to include an argument called `conf.level` that allows you to specify a confidence level of either `0.90`, `0.95`, or `0.99`.
+2. Update your function from #1 to include an argument called `conf.level` that allows you to specify a confidence level of either `0.90`, `0.95`, or `0.99`. 
+
+**Hint:** The approximate multiplier for 90% confidence interval is 1.65.  The approximate multiplier for a 99% confidence interval is 2.6.
 
 ```{r}
 # put your code for your function here
@@ -89,7 +91,7 @@ ___
 When you are finished with your assignment, knit your file and submit through Github. To do so, follow the steps below.  (If your document didn't successfully knit, please reach out to me over email at `phbiostats@jhu.edu` so I can help you trouble-shoot the issue.)
 
 * First you need to **commit** the changes you've made to the document.  Click the colorful Git button at the top of the RStudio window and select "Commit" from the menu.
-* In the window that opens, **stage** your changes by clicking the check boxes next to the `Mini0-1.Rmd` and `Mini0-1.html` files.
+* In the window that opens, **stage** your changes by clicking the check box next to the `Mini4-2.Rmd` file.
 * In the "Commit message" box, type a short description of what changes you've made, something like: `Completed assignment`
 * Click the "Commit" button on the bottom right.
 * You'll see a window that will tell you about the changes that you've made.  Click "Close" to close the window.  You've successfully committed! You can close this commit window now.
