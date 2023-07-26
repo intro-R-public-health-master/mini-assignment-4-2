@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE, eval=FALSE)
 ```
 
-**Due Thursday, November 10 through Github**
+**Due Thursday, November 9 through Github**
 
 In this next assignment, you will continue working on creating functions in `R`. next assignment is to practice creating functions in `R`.
 
@@ -19,7 +19,7 @@ mean_ci <- function(x) {
   xbar <- mean(x, na.rm=TRUE)
   n <- sum(!is.na(x))
   se <- sd(x, na.rm=TRUE) / sqrt(n)
-  xbar + c(2, -2) * se
+  xbar + c(-2, 2) * se
 }
 
 two_mean_ci <- function(x, y) {
@@ -35,7 +35,7 @@ two_mean_ci <- function(x, y) {
   
   se <- sqrt(s_x^2/n_x + s_y^2/n_y)
              
-  estimate + c(2, -2) * se
+  estimate + c(-2, 2) * se
 }
 ```
 
@@ -59,14 +59,14 @@ set.seed(12345)
 x <- rnorm(100)
 y <- runif(75)
 
-means_ci(x)   # should get [1] 0.46814336 0.02225103
+means_ci(x)   # should get [1] 0.02225103 0.46814336 
 
-means_ci(x, y, type="two.means")   # should get [1] -0.06933551 -0.53662437
+means_ci(x, y, type="two.means")   # should get [1] -0.53662437 -0.06933551 
 
 x2 <- c(x, NA)
 y2 <- c(y, NA)
 means_ci(x2, y2, type="two.means")  # should get [1] NA NA
-means_ci(x2, y2, type="two.means", na.rm=TRUE)   # should get [1] -0.06933551 -0.53662437
+means_ci(x2, y2, type="two.means", na.rm=TRUE)   # should get [1] -0.53662437 -0.06933551 
 ```
 
 
